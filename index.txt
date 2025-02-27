@@ -1,0 +1,495 @@
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<title>KAPASA MAKASA COMPUTER LAB STUDENT DIGITAL REGISTER</title>
+<STYLE>
+body{
+
+   background-color:green;
+font-family:elephant:
+font-size:12;
+}
+
+
+img{
+    width:300px;
+height:400px;
+
+
+  
+ margin-left: auto;
+ margin-right: auto;
+}
+
+
+
+
+input{
+            width: 300px;
+            padding: 10px;
+            margin: 20px auto;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color:white;
+            display: flex;
+            flex-direction: center;
+            align-items: flex-start;
+        }
+
+     
+
+
+
+
+input-container {
+            width: 300px;
+            margin: 20px auto; 
+            padding: 15px;
+            border: 2px solid #000; 
+            border-radius: 5px;
+            background-color:blue;
+        }
+
+        
+        label{
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+            background-color:ORANGE;
+            width:420px;
+        }
+
+        
+        
+
+
+
+h1{
+   color:pink;
+   font-size:14;
+font-family-elephant;
+
+}
+
+
+
+
+    #time_left {
+      font-size: 24px;
+      font-weight: bold;
+      color: red;
+    }
+
+p{
+
+   color:white;
+}
+
+
+ 
+        .menu {
+            position: fixed;
+            top: 50px;
+            right: 50px;
+            background-color: red; 
+            color: white;
+            border: none;
+            padding: 30px 50px;  
+            font-size: 28px;      
+            cursor: pointer;
+            border-radius: 12px;  
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+            transition: background-color 0.3s ease; 
+        }
+
+        
+        .menu:hover {
+            background-color: #45a049;  
+        }
+
+        
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: orange;
+            min-width: 160px;
+        }
+
+        .menu:hover .menu-content {
+            display: block;
+        }
+
+        .menu-content a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            display: block;
+        }
+
+        .menu-content a:hover {
+            background-color: #575757;
+        }
+
+
+
+
+
+
+   
+    
+
+        .search-container {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .search-bar {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+
+        .search-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        select {
+            
+width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            background-color:white;
+        }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</STYLE>
+
+
+
+<h1>WELCOME TO KAPASA MAKASA COMPUTER LAB STUDENT DIGITAL REGISTER.GIVEN BAUER<h1> 
+
+
+
+</head>
+ <body>
+
+
+    <button class="menu">
+        Menu
+        <div class="menu-content">
+             <a href="file:///C:/bauer%20html%20files/index/REGISTRATION.HTML">REGISTRATER HERE</a>         
+            <a href="file:///C:/bauer%20html%20files/index/ABOUT%20US.HTML">ABOUT US</a>
+            <a href="file:///C:/bauer%20html%20files/index/CONTACT%20US.HTML">CONTACT US</a>
+           
+        </div>
+    </button>
+
+    <h1>Welcome to the Homepage!</h1>
+  <img  src ="C:\bauer html files/LOGAL.jpg">
+
+		
+ 
+	 
+    
+
+
+     
+
+
+
+        
+
+
+
+
+  <img  src ="C:\bauer html files\index\my/LOGAL.jpg">
+
+
+  <img  src =C:\bauer html files\index\my/kapasa-makasa.jpg">
+
+
+  <img  src ="C:\bauer html files\index\my/bauer.jpg">
+
+
+     
+
+
+
+  
+
+
+<label for="enter-sex"":</label>
+<select id="sex" name="SEX " onchange="update sex Options()">
+        <option value="">Select SEX whether male or female </option>
+        <option value="M">MALE</option>
+        <option value="F">FEMALE</option>
+        
+    </select>
+<body>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Room Search</title>
+ 
+</head>
+<body>
+    <div class="search-container">
+       
+        <select id="hostel-select" onchange="filterRooms()">
+       <option value="">Select Hostel</option>
+       <option value="W">W Hostel</option>
+        <option value="X">X Hostel</option>
+         <option value="Y">Y Hostel</option>
+         <option value="Z">Z Hostel</option>
+        </select>
+        
+        <br><br>
+
+        
+        <input type="text" id="room-search" class="search-bar" placeholder="Search for Room Number" oninput="filterRooms()">
+
+        <button class="search-button" onclick="searchRoom()">Search</button>
+
+        <br><br>
+
+        
+        <select id="room-number">
+            <option value="">Select Room</option>
+            <!-- Room options will be populated here dynamically -->
+        </select>
+    </div>
+
+    <script>
+        const roomOptions = {
+            W: [
+                "W101 A", "W101 B", "W102 A", "W102 B", "W103 A", "W103 B",
+                "W104 A", "W104 B", "W105 A", "W105 B", "W106 A", "W106 B",
+                "W107 A", "W107 B", "W108 A", "W108 B", "W109 A", "W109 B",
+                "W110 A", "W110 B", "W201 A", "W201 B", "W202 A", "W202 B",
+                "W203 A", "W203 B", "W204 A", "W204 B", "W205 A", "W205 B",
+                "W206 A", "W206 B", "W207 A", "W207 B", "W208 A", "W208 B",
+                "W209 A", "W209 B", "W210 A", "W210 B", "W301 A", "W301 B",
+                "W302 A", "W302 B", "W303 A", "W303 B", "W304 A", "W304 B",
+                "W305 A", "W305 B", "W306 A", "W306 B", "W307 A", "W307 B",
+                "W308 A", "W308 B", "W309 A", "W309 B", "W310 A", "W310 B",
+                "W401 A", "W401 B", "W402 A", "W402 B", "W403 A", "W403 B",
+                "W404 A", "W404 B", "W405 A", "W405 B", "W406 A", "W406 B",
+                "W407 A", "W407 B", "W408 A", "W408 B", "W409 A", "W409 B",
+                "W410 A", "W410 B"
+            ],
+            X: [
+                "X101 A", "X101 B", "X102 A", "X102 B", "X103 A", "X103 B",
+                "X104 A", "X104 B", "X105 A", "X105 B", "X106 A", "X106 B",
+                "X107 A", "X107 B", "X108 A", "X108 B", "X109 A", "X109 B",
+                "X110 A", "X110 B", "X201 A", "X201 B", "X202 A", "X202 B",
+                "X203 A", "X203 B", "X204 A", "X204 B", "X205 A", "X205 B",
+                "X206 A", "X206 B", "X207 A", "X207 B", "X208 A", "X208 B",
+                "X209 A", "X209 B", "X210 A", "X210 B", "X301 A", "X301 B",
+                "X302 A", "X302 B", "X303 A", "X303 B", "X304 A", "X304 B",
+                "X305 A", "X305 B", "X306 A", "X306 B", "X307 A", "X307 B",
+                "X308 A", "X308 B", "X309 A", "X309 B", "X310 A", "X310 B",
+                "X401 A", "X401 B", "X402 A", "X402 B", "X403 A", "X403 B",
+                "X404 A", "X404 B", "X405 A", "X405 B", "X406 A", "X406 B",
+                "X407 A", "X407 B", "X408 A", "X408 B", "X409 A", "X409 B",
+                "X410 A", "X410 B"
+            ],
+            Y: [
+                "Y101 A", "Y101 B", "Y102 A", "Y102 B", "Y103 A", "Y103 B",
+                "Y104 A", "Y104 B", "Y105 A", "Y105 B", "Y106 A", "Y106 B",
+                "Y107 A", "Y107 B", "Y108 A", "Y108 B", "Y109 A", "Y109 B",
+                "Y110 A", "Y110 B", "Y201 A", "Y201 B", "Y202 A", "Y202 B",
+                "Y203 A", "Y203 B", "Y204 A", "Y204 B", "Y205 A", "Y205 B",
+                "Y206 A", "Y206 B", "Y207 A", "Y207 B", "Y208 A", "Y208 B",
+                "Y209 A", "Y209 B", "Y210 A", "Y210 B", "Y301 A", "Y301 B",
+                "Y302 A", "Y302 B", "Y303 A", "Y303 B", "Y304 A", "Y304 B",
+                "Y305 A", "Y305 B", "Y306 A", "Y306 B", "Y307 A", "Y307 B",
+                "Y308 A", "Y308 B", "Y309 A", "Y309 B", "Y310 A", "Y310 B",
+                "Y401 A", "Y401 B", "Y402 A", "Y402 B", "Y403 A", "Y403 B",
+                "Y404 A", "Y404 B", "Y405 A", "Y405 B", "Y406 A", "Y406 B",
+                "Y407 A", "Y407 B", "Y408 A", "Y408 B", "Y409 A", "Y409 B",
+                "Y410 A", "Y410 B"
+            ],
+            Z: [
+                "Z101 A", "Z101 B", "Z102 A", "Z102 B", "Z103 A", "Z103 B",
+                "Z104 A", "Z104 B", "Z105 A", "Z105 B", "Z106 A", "Z106 B",
+                "Z107 A", "Z107 B", "Z108 A", "Z108 B", "Z109 A", "Z109 B",
+                "Z110 A", "Z110 B", "Z201 A", "Z201 B", "Z202 A", "Z202 B",
+                "Z203 A", "Z203 B", "Z204 A", "Z204 B", "Z205 A", "Z205 B",
+                "Z206 A", "Z206 B", "Z207 A", "Z207 B", "Z208 A", "Z208 B",
+                "Z209 A", "Z209 B", "Z210 A", "Z210 B", "Z301 A", "Z301 B",
+                "Z302 A", "Z302 B", "Z303 A", "Z303 B", "Z304 A", "Z304 B",
+                "Z305 A", "Z305 B", "Z306 A", "Z306 B", "Z307 A", "Z307 B",
+                "Z308 A", "Z308 B", "Z309 A", "Z309 B", "Z310 A", "Z310 B",
+                "Z401 A", "Z401 B", "Z402 A", "Z402 B", "Z403 A", "Z403 B",
+                "Z404 A", "Z404 B", "Z405 A", "Z405 B", "Z406 A", "Z406 B",
+                "Z407 A", "Z407 B", "Z408 A", "Z408 B", "Z409 A", "Z409 B",
+                "Z410 A", "Z410 B"
+            ]
+        };
+
+        // Filter rooms based on hostel selection and search input
+        function filterRooms() {
+            const hostel = document.getElementById('hostel-select').value;
+            const searchQuery = document.getElementById('room-search').value.toLowerCase();
+
+            const roomSelect = document.getElementById('room-number');
+            roomSelect.innerHTML = '<option value="">Select Room</option>';
+
+            if (hostel && roomOptions[hostel]) {
+                const filteredRooms = roomOptions[hostel].filter(room => room.toLowerCase().includes(searchQuery));
+
+                filteredRooms.forEach(room => {
+                    const option = document.createElement('option');
+                    option.value = room;
+                    option.textContent = room;
+                    roomSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Search function for the button
+        function searchRoom() {
+            filterRooms();  // Trigger the filtering
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</SELECT>
+
+    <label for="year-of-study">:</label>
+    <select id="year-of-study" name="year-of-study" onchange="updateYearOptions()">
+        <option value="">SELECT YEAR OF STUDY</option>
+        <option value="1st">1st Year</option>
+        <option value="2nd">2nd Year</option>
+        <option value="3rd">3rd Year</option>
+        <option value="4th">4th Year</option>
+        <option value="5th">5th Year</option>
+    </select>
+
+
+       
+
+
+<label for="year-of-study">:</label>
+    <select id="program-of-study" name="program -of-study" onchange="updateYearOptions()">
+        <option value="">SELECT PROGRAMME OF STUDY</option>
+        <option value="CYBER">CYBERSECURITY</option>
+        <option value="ICT">INFORMATION COMMUNICATION TECHNOLOGY</option>
+        <option value="AGRIC">SUSTAINABLE AGRICULTURE</option>
+        <option value="ANIMAL">ANIMAL SCIENCE</option>
+        <option value="DATA">DATA SCIENCE</option>
+        <option value="FISH">FISHARIES AND AQUACULTURE </option>
+ <option value="AGRO">AGRO FOREST </option>
+    </select>
+
+    
+
+       
+
+
+
+
+
+
+<lable>ITEMS AT HAND</lable>
+<input type="text"name="member type"placeholder="enter all your items you have come in with"></td></tr>
+
+
+  
+
+
+<label for="event-datetime">Choose a date and time in:</label>
+<input type="datetime-local" id="event-datetime" name="event-datetime">
+
+
+  <form action="sign_in.php" method="POST">
+  <label for="student_id">Student ID:</label>
+  <input type="text" id="student_id" name="student_id" required><br><br>
+  <label for="student_name">STUDENT NAME:</label>
+  <input type="text" id="student_name" name="student_name" required  pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed"><br><br>
+  <input type="submit" value="Sign In">
+</form>
+
+
+
+
+
+
+<label for="event-datetime">Choose a date and time out:</label>
+<input type="datetime-local" id="event-datetime" name="event-datetime">
+
+<form action="sign_in.php" method="POST">
+  <label for="student_id">Student ID:</label>
+  <input type="text" id="student_id" name="student_id" required "><br><br>
+  <label for="student_name">STUDENT NAME:</label>
+  <input type="text" id="student_name" name="student_name" required  pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed"><br><br>
+  <input type="submit" value="Sign out">
+</form>
+
+
+
+
+ 
+
+
+
+
+
+
+
+</form>
+</div>
+</body>
+</html>

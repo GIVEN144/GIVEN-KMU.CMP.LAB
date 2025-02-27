@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+        <div id="menu" class="menu">
+            <ul>
+                <li><a href="file:///C:/bauer%20html%20files/index/HOME%20PAGE.HTML">HOME PAGE</a></li>
+                <li><a href="file:///C:/bauer%20html%20files/index/ABOUT%20US.HTML">ABOUT US</a></li>
+                <li><a href="file:///C:/bauer%20html%20files/index/REGISTRATION%20FORM.HTML">REGISTRATION PAGE</a></li>
+                <li><a href="file:///C:/bauer%20html%20files/index/login.html">LOGIN</a></li>
+                <li><a href="file:///C:/bauer%20html%20files/index/CONTACT%20US.HTML">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

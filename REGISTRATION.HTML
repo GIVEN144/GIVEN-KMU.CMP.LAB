@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-colo:green;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: red;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group input:focus {
+            border-color: #007BFF;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .text-center {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .text-center a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+ select {
+            width: 105%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            background-color:white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form action="login.html" method="get">
+        <div class="form-group">
+            <label for="STUDENT NAME">STUDENT NAME:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+    <div class="form-group">
+            <label for="ID">STUDENT ID:</label>
+            <input type="ID" id="ID" name="ID" required>
+        </div>
+
+<div class="form-group">
+            <label for="NRC">ENTER NRC:</label>
+            <input type="NRC" id="NRC" name="NRC" required>
+        </div>
+        
+ <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+
+
+
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+
+
+  <div class="form-group">
+            <label for="email">Phone mumber:</label>
+            <input type="PHONE NUMBER" id="phone number" name="email" required>
+        </div>
+
+
+
+<label for="year-of-study">:</label>
+    <select id="GENDER" name="GENDER" onchange="updateYearOptions()">
+        <option value="">SELECT GENDER</option>
+        <option value="GENDER">MALE</option>
+        <option value="GENDER">FEMALE</option>
+        
+    </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+
+    <div class="text-center">
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+</div>
+
+</body>
+</html>
